@@ -1,0 +1,5 @@
+{
+  "name": "form",
+  "get": ["token","username"],
+  "post": ["name", "email","url","subject","message"]
+}
