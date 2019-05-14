@@ -5,7 +5,7 @@ Generate PHP GET and POST request endpoints from JSON.
 ## Install
 
 ```
-$ npm install @taskinoz/php-request-generator
+$ npm install php-request-generator
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ $ npm install @taskinoz/php-request-generator
 With the name set
 
 ```js
-const phpReq = require("@taskinoz/php-request-generator");
+const phpReq = require("php-request-generator");
 
 var configJSON = {
    name: "form",
@@ -28,7 +28,7 @@ phpReq(configJSON);
 With no name set
 
 ```js
-const phpReq = require("@taskinoz/php-request-generator");
+const phpReq = require("php-request-generator");
 
 var configJSON = {
    get: ["token","username"],
