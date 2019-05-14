@@ -1,2 +1,40 @@
 # php-request-generator
-A nodejs script to turn JSON config files into PHP files
+
+Generate PHP GET and POST request endpoints from JSON.
+
+## Install
+
+```
+$ npm install @taskinoz/php-request-generator
+```
+
+## Usage
+
+With the name set
+
+```js
+const phpReq = require("@taskinoz/php-request-generator");
+
+var configJSON = {
+   name: "form",
+   get: ["token","username"],
+   post: ["name", "email","url","subject","message"]
+ }
+
+phpReq(configJSON);
+// Creates the file "form.php" with all the request variables set
+```
+
+With no name set
+
+```js
+const phpReq = require("@taskinoz/php-request-generator");
+
+var configJSON = {
+   get: ["token","username"],
+   post: ["name", "email","url","subject","message"]
+ }
+
+phpReq(configJSON);
+// Returns raw PHP with all the request variables set
+```
