@@ -1,0 +1,26 @@
+{
+  "name": "php-request-generator",
+  "version": "1.0.0",
+  "description": "Generate PHP GET and POST request endpoints from JSON.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taskinoz/php-request-generator.git"
+  },
+  "keywords": [
+    "PHP",
+    "requests",
+    "GET",
+    "POST",
+    "generator"
+  ],
+  "author": "Tristan Kennedy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taskinoz/php-request-generator/issues"
+  },
+  "homepage": "https://github.com/taskinoz/php-request-generator#readme"
+}
