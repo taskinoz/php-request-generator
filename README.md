@@ -12,11 +12,14 @@ $ npm install php-request-generator
 
 With the name set
 
+(Note: adding `allRequests` or setting it to true will combine requests with &&)
+
 ```js
 const phpReq = require("php-request-generator");
 
 var configJSON = {
    name: "form",
+   allRequests: "true",
    get: ["token","username"],
    post: ["name", "email","url","subject","message"]
  }

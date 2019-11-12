@@ -21,11 +21,18 @@ module.exports = function phpReq(input) {
   }
 
   if (config.get !== undefined && (config.get).length>0) {
-    file+='//Get requests\n\tif (';
+    file+='\t//Get requests\n\tif (';
     for (let i = 0; i < (config.get).length; i++) {
       file+=`isset($_GET['${config.get[i]}'])`;
       if (i<(config.get).length-1) {
-        file+=" && ";
+        if (config.allRequests==true &&
+            config.allRequests!==undefined &&
+            config.allRequests!==null) {
+          file+=" && ";
+        }
+        else {
+          file+=" || ";
+        }
       }
     }
     file+="){\n";
@@ -35,11 +42,18 @@ module.exports = function phpReq(input) {
     file+="\t}\n\n";
   }
   if (config.post !== undefined && (config.post).length>0) {
-    file+='//Post requests\n\tif (';
+    file+='\t//Post requests\n\tif (';
     for (let i = 0; i < (config.post).length; i++) {
       file+=`isset($_POST['${config.post[i]}'])`;
       if (i<(config.post).length-1) {
-        file+=" && ";
+        if (config.allRequests==true &&
+            config.allRequests!==undefined &&
+            config.allRequests!==null) {
+          file+=" && ";
+        }
+        else {
+          file+=" || ";
+        }
       }
     }
     file+="){\n";
