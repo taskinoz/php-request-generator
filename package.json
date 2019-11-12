@@ -1,6 +1,6 @@
 {
   "name": "php-request-generator",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Generate PHP GET and POST request endpoints from JSON.",
   "main": "index.js",
   "scripts": {
